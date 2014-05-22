@@ -14,9 +14,14 @@ public class DriverAlertNotification implements Serializable {
 	
 	private String alertNotification;
 
+	private String driverName;
+	private int routeId;
+
+	private String routeName;
+
 	public DriverAlertNotification(String truckDriverEventKey, int driverId,
 			int truckId, long timeStamp, String timeStampString,
-			String alertMessage) {
+			String alertMessage, String driverName, int routeId, String routeName) {
 		super();
 		this.truckDriverEventKey = truckDriverEventKey;
 		this.driverId = driverId;
@@ -24,6 +29,9 @@ public class DriverAlertNotification implements Serializable {
 		this.timeStamp = timeStamp;
 		this.timeStampString = timeStampString;
 		this.alertNotification = alertMessage;
+		this.driverName = driverName;
+		this.routeId = routeId;
+		this.routeName = routeName;
 	}
 
 	public String getTruckDriverEventKey() {
@@ -74,5 +82,30 @@ public class DriverAlertNotification implements Serializable {
 		this.alertNotification = alertNotification;
 	}
 
+	public String getDriverName() {
+		return driverName;
+	}
+
+	public void setDriverName(String driverName) {
+		this.driverName = driverName;
+	}
+
+	public int getRouteId() {
+		return routeId;
+	}
+
+	public void setRouteId(int routeId) {
+		this.routeId = routeId;
+	}
+
+	public String getRouteName() {
+		return routeName;
+	}
+
+	public void setRouteName(String routeName) {
+		this.routeName = routeName;
+	}
+
+	
 	
 }

@@ -15,11 +15,16 @@ public class TruckDriverViolationEvent implements Serializable {
 	private String infractionEvent;
 	private long numberOfInfractions;
 	private String timeStampString;
+
+	private String driverName;
+	private int routeId;
+
+	private String routeName;
 	
 	
 	public TruckDriverViolationEvent(String truckDriverEventKey, int driverId, int truckId, long timeStamp, String timeStampString,
 			double longitude, double latitude, String lastInfraction,
-			long numberOfInfractions) {
+			long numberOfInfractions, String driverName, int routeId, String routeName) {
 		super();
 		this.truckDriverEventKey = truckDriverEventKey;
 		this.driverId = driverId;
@@ -30,6 +35,9 @@ public class TruckDriverViolationEvent implements Serializable {
 		this.latitude = latitude;
 		this.infractionEvent = lastInfraction;
 		this.numberOfInfractions = numberOfInfractions;
+		this.driverName = driverName;
+		this.routeId = routeId;
+		this.routeName = routeName;
 	}
 
 
@@ -120,6 +128,36 @@ public class TruckDriverViolationEvent implements Serializable {
 
 	public void setTimeStampString(String timeStampString) {
 		this.timeStampString = timeStampString;
+	}
+
+
+	public String getDriverName() {
+		return driverName;
+	}
+
+
+	public void setDriverName(String driverName) {
+		this.driverName = driverName;
+	}
+
+
+	public int getRouteId() {
+		return routeId;
+	}
+
+
+	public void setRouteId(int routeId) {
+		this.routeId = routeId;
+	}
+
+
+	public String getRouteName() {
+		return routeName;
+	}
+
+
+	public void setRouteName(String routeName) {
+		this.routeName = routeName;
 	}
 	
 	
